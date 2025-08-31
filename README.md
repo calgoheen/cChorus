@@ -6,6 +6,8 @@
 
 cChorus is a simple chorus audio effect plugin available in VST3, AU, and CLAP formats for Mac and Windows, built using C++ and JUCE.
 
+You can find the actual DSP code for this effect in the [cgo_modules](https://github.com/calgoheen/cgo_modules/tree/main/cgo_processors/effects) repository.
+
 This project is inspired by the chorus audio effect found in a popular DAW.
 
 ## Build Instructions
@@ -28,9 +30,9 @@ cmake --build build
 
 ## Analysis
 
-To recreate the sound of the chorus effect this plugin is modelled after, some analysis was performed in Python. The script is located at `Analysis/plot_taps.py`, along with images of the generated plots.
+To recreate the sound of the chorus effect this plugin is modelled after, some analysis was performed in Python. The script is located in the `Analysis` folder, along with images of the generated plots.
 
-An impulse train was used as input with a frequency of 32 Hz. This was passed through the chorus, giving an output that contains the delays at various points along the modulation curve.
+An impulse train was used as input with a frequency of 32 Hz. This was passed through the chorus, producing an output that contains the delay taps at various points along the modulation curve.
 The delay times were then plotted for each impulse to show the modulation curve, which was used to determine the settings for cChorus.
 
 ## External Dependencies
