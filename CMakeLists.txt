@@ -67,6 +67,13 @@ target_compile_definitions(${PROJECT_NAME}
         JUCE_VST3_CAN_REPLACE_VST2=0
         JUCE_WEB_BROWSER=0)
 
+if(MSVC)
+    target_compile_definitions(${PROJECT_NAME}
+        PUBLIC
+            WIN32_LEAN_AND_MEAN
+            NOMINMAX)
+endif()
+
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
         juce::juce_audio_utils
