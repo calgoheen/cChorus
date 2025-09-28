@@ -9,6 +9,7 @@ ChorusProcessor::ChorusProcessor()
                                      parameters.feedback.release(),
                                      parameters.flipFeedback.release(),
                                      parameters.width.release(),
+                                     parameters.warmth.release(),
                                      parameters.output.release(),
                                      parameters.mix.release() }),
     chorus (parameters)
