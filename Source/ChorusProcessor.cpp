@@ -44,6 +44,10 @@ void ChorusProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::Midi
     chorus.processBlock (buffer, midi, getPlayHead());
 }
 
+void ChorusProcessor::releaseResources() 
+{
+}
+
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new ChorusProcessor();

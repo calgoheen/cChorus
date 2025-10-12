@@ -52,7 +52,7 @@ file(GLOB_RECURSE SourceFiles CONFIGURE_DEPENDS
 
 target_sources(${PROJECT_NAME} PRIVATE ${SourceFiles})
 
-juce_add_binary_data(Resources SOURCES "Resources/layout.xml")
+juce_add_binary_data(Resources SOURCES "{CMAKE_CURRENT_SOURCE_DIR}/Resources/layout.xml")
 
 if(CMAKE_BUILD_TYPE STREQUAL "Release")
     set(ShowFoleysEditor "FOLEYS_SHOW_GUI_EDITOR_PALLETTE=0")
