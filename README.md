@@ -12,20 +12,21 @@ This project is inspired by the chorus audio effect found in a popular DAW.
 
 ## Build Instructions
 
-This project requires [CMake](https://cmake.org/) to build. On Windows, [Ninja](https://ninja-build.org/) is also required.
+### Prerequisites
+
+- [CMake](https://cmake.org/)
+- [Ninja](https://ninja-build.org/)
+
+### Build
 
 ```
 # Clone the repo
 git clone --recurse-submodules https://github.com/calgoheen/cChorus.git
 cd cChorus
 
-# Mac
-cmake -Bbuild -DCMAKE_OSX_ARCHITECTURES="x86_64;arm64" -DCMAKE_BUILD_TYPE=Release
-cmake --build build
-
-# Windows
-cmake -Bbuild -GNinja -DCMAKE_BUILD_TYPE=Release
-cmake --build build
+# Configure and build
+cmake --preset release
+cmake --build --preset release
 ```
 
 ## Analysis
